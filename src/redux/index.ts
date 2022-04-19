@@ -1,10 +1,13 @@
-import createSagaMiddleware from "redux-saga";
-import storage from 'redux-persist/lib/storage'
-import rootSaga from './rootSagas';
-import { persistStore, persistReducer } from 'redux-persist';
+
+import reducers from './modules/combineReducers';
+import { createStore, applyMiddleware } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension'
-import { applyMiddleware, createStore } from 'redux';
-import reducers from './modules/combineReducers'
+import { persistStore, persistReducer } from 'redux-persist';
+import storage from 'redux-persist/lib/storage'
+import createSagaMiddleware from 'redux-saga'
+import rootSaga from './rootSagas';
+import { IEpisodeState } from './modules/episodes/dto/episodesState';
+
 
 const persistConfig = {
     key: 'root',
@@ -18,7 +21,7 @@ const sagaMiddleware = createSagaMiddleware()
 const persistedReducer = persistReducer(persistConfig, reducers);
 
 export interface IStore {
-
+    episodes: IEpisodeState
 }
 
 const store = createStore(persistedReducer, composeWithDevTools(applyMiddleware(sagaMiddleware)));
