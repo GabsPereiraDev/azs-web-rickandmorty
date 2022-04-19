@@ -1,10 +1,11 @@
 import { ICharacter } from "../../../../dto/ICharacter"
 
 export interface IEpisode {
-    id: string
+    id: number
     name: string
     air_date: string
     episode: string
     characters: ICharacter[]
-    created: string
+    url: string
+
 }

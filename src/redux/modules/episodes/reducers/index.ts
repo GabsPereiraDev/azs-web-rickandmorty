@@ -19,9 +19,10 @@ export const episodes: Reducer<IEpisodeState> = (
             case FIND_EPISODES:
                 break;
             case INSERT_EPISODES:
-                const episodes = action.data.episodes as IEpisodes
+                const episodes = action.payload.episodes 
 
                 draft.episodes = episodes
+                break
         }
     })
 

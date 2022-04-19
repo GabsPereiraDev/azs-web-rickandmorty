@@ -1,11 +1,11 @@
-import { IEpisodes } from "../dto/IEpisodes";
-import { FIND_EPISODES } from "../enum/actions.enum";
 
-export function insertEpisodes(episodes: IEpisodes) {
+import { INSERT_EPISODES } from "../enum/actions.enum";
+
+export function insertEpisodes(episodes: object) {
     return {
-        type: FIND_EPISODES,
+        type: INSERT_EPISODES,
         payload: {
-            episodes
+            episodes: episodes
         }
     }
 }
