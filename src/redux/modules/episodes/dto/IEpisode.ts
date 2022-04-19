@@ -1,4 +1,4 @@
-import { ICharacter } from "./ICharacter"
+import { ICharacter } from "../../../../dto/ICharacter"
 
 export interface IEpisode {
     id: string
