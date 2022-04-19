@@ -15,20 +15,23 @@ export function Episodes() {
         <Container>
             <h2>Lista de Episodios Rick And Morty</h2>
             <div className="container">
-                {episodes.results.map((episode) => {
-                    return (
-                        <>
-                            <EpisodeUI
-                                episode={episode.episode}
-                                name={episode.name}
-                                air_date={episode.air_date}
-                                characters={episode.characters}
-                                url={episode.url}
-                                id={episode.id}
-                            />
-                        </>
-                    )
-                })}
+                {episodes.results.length > 0 && (
+                    episodes.results.map((episode) => {
+                        return (
+                            <>
+                                <EpisodeUI
+                                  
+                                    episode={episode.episode}
+                                    name={episode.name}
+                                    air_date={episode.air_date}
+                                    characters={episode.characters}
+                                    url={episode.url}
+                                    id={episode.id}
+                                />
+                            </>
+                        )
+                    })
+                )}
             </div>
         </Container>
     )

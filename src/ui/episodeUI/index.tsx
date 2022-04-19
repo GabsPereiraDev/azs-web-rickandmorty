@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
-import { IEpisode } from "../../redux/modules/episodes/dto/IEpisode";
+import { ISingleEpisode } from "../../redux/modules/episodes/dto/ISingleEpisode";
 import { Container } from "./style";
 
-export function EpisodeUI({ name, episode, air_date, characters, id }: IEpisode) {
+export function EpisodeUI({ name, episode, air_date, characters, id }: ISingleEpisode) {
     return (
-        <Container>
+        <Container key={id}>
             <Link to={`/episode/${id}`}>
    
                     <h4>{name} - Episodio: {episode}</h4>

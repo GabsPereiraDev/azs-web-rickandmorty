@@ -1,8 +1,8 @@
-import { IEpisode } from "./IEpisode";
+import { ISingleEpisode } from "./ISingleEpisode";
 import { IInfo } from "./Iinfo";
 
 
 export interface IEpisodes {
     info: IInfo;
-    results: IEpisode[]
+    results: ISingleEpisode[]
 }
