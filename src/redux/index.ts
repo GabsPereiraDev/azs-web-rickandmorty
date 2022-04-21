@@ -7,6 +7,7 @@ import storage from 'redux-persist/lib/storage'
 import createSagaMiddleware from 'redux-saga'
 import rootSaga from './rootSagas';
 import { IEpisodeState } from './modules/episodes/dto/episodesState';
+import { ICharacterState } from './modules/characters/dto/ICharacterState';
 
 
 const persistConfig = {
@@ -22,6 +23,7 @@ const persistedReducer = persistReducer(persistConfig, reducers);
 
 export interface IStore {
     episodes: IEpisodeState
+    characters:ICharacterState
 }
 
 const store = createStore(persistedReducer, composeWithDevTools(applyMiddleware(sagaMiddleware)));

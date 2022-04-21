@@ -4,7 +4,7 @@ import { IStore } from "../../redux";
 import { IEpisodes } from "../../redux/modules/episodes/dto/IEpisodes";
 import { EpisodeUI } from "../../ui/episodeUI";
 
-import { Container } from "./style";
+import { Container } from "../SingleEpisode/style";
 
 export function Episodes() {
 

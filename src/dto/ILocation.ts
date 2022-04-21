@@ -1,4 +1,4 @@
-import { ICharacter } from "./ICharacter"
+import { ICharacter } from "../redux/modules/characters/dto/ICharacter"
 
 export interface ILocation {
     id: string
