@@ -10,7 +10,6 @@ export function Episodes() {
 
     const episodes = useSelector<IStore, IEpisodes>(state => state.episodes.episodes)
 
-
     return (
         <Container>
             <h2>Lista de Episodios Rick And Morty</h2>
@@ -20,7 +19,6 @@ export function Episodes() {
                         return (
                             <>
                                 <EpisodeUI
-                                  
                                     episode={episode.episode}
                                     name={episode.name}
                                     air_date={episode.air_date}

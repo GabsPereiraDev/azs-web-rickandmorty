@@ -3,39 +3,39 @@ import { Reducer } from "redux";
 import produce from "immer";
 import { ISingleEpisode } from "../../episodes/dto/ISingleEpisode";
 import { IFavoriteState } from "../dto/favoriteState";
-import { EXCLUE_FAVORITES, INSERT_FAVORITES } from "../enum/actions.enum";
+import { EXCLUE_VISA, INSERT_VISA } from "../enum/actions.enum";
 
 
 
 const INITIAL_STATE: IFavoriteState = {
-    favorites: [] as ISingleEpisode[],
+    visa: [] as ISingleEpisode[],
 };
 
 
-export const favorites: Reducer<IFavoriteState> = (
+export const visa: Reducer<IFavoriteState> = (
     state = INITIAL_STATE,
     action
 ) => {
     return produce(state, (draft) => {
         switch (action.type) {
-            case EXCLUE_FAVORITES:
-                const remove = action.payload.favoriteId
-                const removeFavorite = draft.favorites.filter(episode => episode.id !== remove)
-                draft.favorites = removeFavorite
+            case EXCLUE_VISA:
+                const remove = action.payload.visaId
+                const removeFavorite = draft.visa.filter(episode => episode.id !== remove)
+                draft.visa = removeFavorite
                 break;
-            case INSERT_FAVORITES:
+            case INSERT_VISA:
 
                 const episode = action.payload.favorite as ISingleEpisode
 
 
-                const favoriteInIndex = draft.favorites.findIndex(
+                const favoriteInIndex = draft.visa.findIndex(
                     (item) => item.id === episode.id
                 );
 
                 if (favoriteInIndex >= 0) {
 
                 } else {
-                    draft.favorites.push(episode);
+                    draft.visa.push(episode);
                 }
 
 

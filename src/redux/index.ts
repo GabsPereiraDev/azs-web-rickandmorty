@@ -8,6 +8,7 @@ import createSagaMiddleware from 'redux-saga'
 import rootSaga from './rootSagas';
 import { IEpisodeState } from './modules/episodes/dto/episodesState';
 import { ICharacterState } from './modules/characters/dto/ICharacterState';
+import { IFavoriteState } from './modules/favorites/dto/favoriteState';
 
 
 const persistConfig = {
@@ -24,6 +25,7 @@ const persistedReducer = persistReducer(persistConfig, reducers);
 export interface IStore {
     episodes: IEpisodeState
     characters:ICharacterState
+    favorites:IFavoriteState
 }
 
 const store = createStore(persistedReducer, composeWithDevTools(applyMiddleware(sagaMiddleware)));

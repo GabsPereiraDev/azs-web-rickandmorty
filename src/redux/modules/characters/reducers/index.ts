@@ -8,9 +8,6 @@ import { ICharacter } from "../dto/ICharacter";
 
 const INITIAL_STATE: ICharacterState = {
     characters: [] as ICharacter[],
-
-
-
 };
 
 

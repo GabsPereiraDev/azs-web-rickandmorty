@@ -12,11 +12,20 @@ text-align: center;
 padding: 2rem;
 display: flex;
 flex-direction: column;
-
 align-items:center;
 h2{
     margin: 2rem;
 }
+button{
+  border: 0;
+  background-color:0;
+
+}
+svg{
+    width: 2rem;
+    height: auto;
+    color:gold
+  }
 .container{
     width: 100%;
     margin:0 auto;
