@@ -26,14 +26,24 @@ svg{
     height: auto;
     color:gold
   }
+  .icons{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    span{
+      margin: 2rem;
+    }
+  }
 .container{
     width: 100%;
-    margin:0 auto;
+ 
     display: flex;
     flex-direction: column;
   align-items:center;
+  justify-content: center;
 
    > div{
+     width: 100%;
       display: flex;
     justify-content: space-around;
     flex-wrap: wrap;

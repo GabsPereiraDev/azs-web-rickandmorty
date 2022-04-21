@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const Container = styled.div`
 width: 100%;
-
 text-align: center;
 h2{
     margin: 2rem;
@@ -11,6 +10,7 @@ h2{
     width: 100%;
     margin:0 auto;
     display: flex;
+    direction:row;
     justify-content: center;
     flex-wrap: wrap;
     align-items: center;

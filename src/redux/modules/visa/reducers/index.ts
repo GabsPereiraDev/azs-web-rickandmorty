@@ -2,17 +2,17 @@ import { Reducer } from "redux";
 
 import produce from "immer";
 import { ISingleEpisode } from "../../episodes/dto/ISingleEpisode";
-import { IFavoriteState } from "../dto/favoriteState";
+import { IVisaState } from "../dto/favoriteState";
 import { EXCLUE_VISA, INSERT_VISA } from "../enum/actions.enum";
 
 
 
-const INITIAL_STATE: IFavoriteState = {
+const INITIAL_STATE: IVisaState = {
     visa: [] as ISingleEpisode[],
 };
 
 
-export const visa: Reducer<IFavoriteState> = (
+export const visa: Reducer<IVisaState> = (
     state = INITIAL_STATE,
     action
 ) => {

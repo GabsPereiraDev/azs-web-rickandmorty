@@ -9,6 +9,7 @@ import rootSaga from './rootSagas';
 import { IEpisodeState } from './modules/episodes/dto/episodesState';
 import { ICharacterState } from './modules/characters/dto/ICharacterState';
 import { IFavoriteState } from './modules/favorites/dto/favoriteState';
+import { IVisaState } from './modules/visa/dto/favoriteState';
 
 
 const persistConfig = {
@@ -24,8 +25,9 @@ const persistedReducer = persistReducer(persistConfig, reducers);
 
 export interface IStore {
     episodes: IEpisodeState
-    characters:ICharacterState
-    favorites:IFavoriteState
+    characters: ICharacterState
+    favorites: IFavoriteState
+    visa: IVisaState
 }
 
 const store = createStore(persistedReducer, composeWithDevTools(applyMiddleware(sagaMiddleware)));

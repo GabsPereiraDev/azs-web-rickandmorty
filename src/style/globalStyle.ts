@@ -12,7 +12,10 @@ export const GlobalStyle = createGlobalStyle`
     h1,h2,h3,h4,h5,h6,a,input,select,textarea{
         font-family:Work Sans,sans-serif;
     }
-
+    body{
+        position:relative
+        z-index:1
+    }
     a {
         text-decoration: none;
         color: var(--white);

@@ -2,6 +2,6 @@
 import { ISingleEpisode } from "../../episodes/dto/ISingleEpisode";
 
 
-export interface IFavoriteState {
+export interface IVisaState {
     visa: ISingleEpisode[]
 }
